@@ -1,9 +1,10 @@
-namespace VoeAirlines.Entities 
+namespace VoeAirlines.ViewModels
 {
-    public class Piloto
+    public class DetalhesPilotoViewModel
     {
-        public Piloto(string nome, string matricula)
+        public DetalhesPilotoViewModel(int id, string nome, string matricula)
         {
+            Id = id;
             Nome = nome;
             Matricula = matricula;
         }
@@ -11,6 +12,5 @@ namespace VoeAirlines.Entities
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Matricula { get; set; }
-        public ICollection<Voo>? Voos { get; set; }
     }
 }

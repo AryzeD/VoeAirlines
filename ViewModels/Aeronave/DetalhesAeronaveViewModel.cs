@@ -1,9 +1,10 @@
-namespace VoeAirlines.Entities
+namespace VoeAirlines.ViewModels 
 {
-    public class Aeronave
+    public class DetalhesAeronaveViewModel
     {
-        public Aeronave(string fabricante, string modelo, string codigo, string jatinho)
+        public DetalhesAeronaveViewModel(int id, string fabricante, string modelo, string codigo, string jatinho)
         {
+            Id = id;
             Fabricante = fabricante;
             Modelo = modelo;
             Codigo = codigo;
@@ -15,7 +16,5 @@ namespace VoeAirlines.Entities
         public string Modelo { get; set; }
         public string Codigo { get; set; }
         public string Jatinho { get; set; }
-        public ICollection<Manutencao> Manutencoes { get; set; }=null!;
-        public ICollection<Voo>? Voos { get; set; }
     }
 }
