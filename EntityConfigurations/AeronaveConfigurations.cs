@@ -31,6 +31,9 @@ namespace VoeAirlines.EntityConfigurations
             builder.Property(a=>a.Jatinho)
                     .IsRequired()
                     .HasMaxLength(45);
+                    
+            builder.Property(a=>a.Tipo)
+                    .IsRequired();
 
             //Relacionamentos
             builder.HasMany(a=>a.Manutencoes)

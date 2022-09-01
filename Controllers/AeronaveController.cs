@@ -18,4 +18,9 @@ public class AeronaveController : ControllerBase
         var aeronave = _aeronaveService.AdicionarAeronave(dados);
         return Ok(aeronave);
     }
+    [HttpGet]
+    public IActionResult ListarAeronaves() 
+    {
+        return Ok(_aeronaveService.ListarAeronaves());
+    }
 }

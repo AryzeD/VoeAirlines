@@ -16,7 +16,7 @@ namespace VoeAirlines.Services
 
         public DetalhesAeronaveViewModel AdicionarAeronave(AdicionarAeronaveViewModel dados) 
         {
-            var aeronave = new Aeronave(dados.Fabricante, dados.Modelo, dados.Codigo, dados.Jatinho);
+            var aeronave = new Aeronave(dados.Fabricante, dados.Modelo, dados.Codigo, dados.Jatinho, dados.Tipo);
 
             _context.Add(aeronave);
             _context.SaveChanges();
@@ -27,8 +27,14 @@ namespace VoeAirlines.Services
                 aeronave.Fabricante,
                 aeronave.Modelo,
                 aeronave.Codigo,
-                aeronave.Jatinho
+                aeronave.Jatinho,
+                aeronave.Tipo
             );
+        }
+
+        public IEnumerable<ListarAeronaveViewModel> ListarAeronaves()
+        {
+            return _context.Aeronaves.Select(a=>new ListarAeronaveViewModel(a.Id, a.Modelo, a.Tipo));
         }
     }
 }
