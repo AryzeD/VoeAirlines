@@ -12,7 +12,6 @@ namespace VoeAirlines.ViewModels
             Codigo = codigo;
             Jatinho = jatinho;
             Tipo = tipo;
-
         }
 
         public string Fabricante { get; set; }

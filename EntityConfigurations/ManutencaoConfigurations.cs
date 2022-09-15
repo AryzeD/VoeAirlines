@@ -20,5 +20,7 @@ public class ManutencaoConfigurations : IEntityTypeConfiguration<Manutencao>
         //Propriedade Tipo
         builder.Property(m=>m.Tipo)
               .IsRequired();
+        builder.Property(m=>m.Observacao)
+              .HasMaxLength(100);
     } 
 }
