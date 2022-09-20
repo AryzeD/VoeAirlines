@@ -27,5 +27,15 @@ namespace VoeAirlines.Controllers
         {
             return Ok(_manutencaoService.DetalhesManutencoes(aeronaveId));
         }
+
+        [HttpGet("{id}/ficha")]
+        public IActionResult GerarFichaManutencao(int id)
+        {
+            var conteudo = _manutencaoService.GerarFichaManutencao(id);
+            if(conteudo != null)
+                return File(conteudo,"application/pdf");
+            return NotFound();
+            
+        }
     }    
 }

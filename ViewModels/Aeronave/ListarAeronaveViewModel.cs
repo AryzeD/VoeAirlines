@@ -4,7 +4,7 @@ using VoeAirlines.Entities.Enums;
 
 public class ListarAeronaveViewModel
 {
-    public ListarAeronaveViewModel(int id, string modelo, TipoAeronave tipo)
+    public ListarAeronaveViewModel(int id, string modelo, string jatinho ,TipoAeronave tipo)
     {
         Id = id;
         Modelo = modelo;
@@ -17,11 +17,13 @@ public class ListarAeronaveViewModel
             case 2: Tipo = "Defesa e Segurança";
             break; 
         }; */
-        Tipo = tipo;
+        Jatinho = jatinho;
+        Tipo = tipo;   
     }
 
     public int Id { get; set; }
     public string Modelo { get; set; }
+    public string Jatinho { get; set; }    
     public TipoAeronave Tipo { get; set; }
     
 }

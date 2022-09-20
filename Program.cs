@@ -1,5 +1,7 @@
 using VoeAirlines.Services;
 using VoeAirlines.Context;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,7 @@ builder.Services.AddDbContext<VoeAirlinesContext>();
 builder.Services.AddTransient<AeronaveService>();
 builder.Services.AddTransient<PilotoService>();
 builder.Services.AddTransient<ManutencaoService>();
+builder.Services.AddSingleton(typeof(IConverter),new SynchronizedConverter(new PdfTools()));
 
 var app = builder.Build();
 

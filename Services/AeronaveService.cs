@@ -34,7 +34,7 @@ namespace VoeAirlines.Services
 
         public IEnumerable<ListarAeronaveViewModel> ListarAeronaves()
         {
-            return _context.Aeronaves.Select(a=>new ListarAeronaveViewModel(a.Id, a.Modelo, a.Tipo));
+            return _context.Aeronaves.Select(a=>new ListarAeronaveViewModel(a.Id, a.Modelo, a.Jatinho, a.Tipo));
         }
 
         public DetalhesAeronaveViewModel? ListarAeronavePeloId(int id)
