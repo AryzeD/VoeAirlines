@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icone.ico" type="img/icon">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>VoeAirlines - Sistema de Manejamento Integrado</title>
+</head>
+<body>
+    <header>
+        <div id="topo">
+            suporte: 61 985632365
+         </div> 
+        <div class="container">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-aeronave-tab" data-bs-toggle="pill" data-bs-target="#v-pills-aeronave" type="button" role="tab" aria-controls="v-pills-aeronave" aria-selected="true">Aeronaves</button>
+                <button class="nav-link" id="v-pills-manutencao-tab" data-bs-toggle="pill" data-bs-target="#v-pills-manutencao" type="button" role="tab" aria-controls="v-pills-manutencao" aria-selected="false">Manutenções</button>
+                <button class="nav-link" id="v-pills-piloto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-piloto" type="button" role="tab" aria-controls="v-pills-piloto" aria-selected="false">Pilotos</button>
+                <button class="nav-link" id="v-pills-voo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-voo" type="button" role="tab" aria-controls="v-pills-voo" aria-selected="false">Voos</button>
+                <button class="nav-link" id="v-pills-cancelamento-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cancelamento" type="button" role="tab" aria-controls="v-pills-cancelamento" aria-selected="false">Cancelamentos</button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-aeronave" role="tabpanel" aria-labelledby="v-pills-aeronave-tab" tabindex="0">
+                    <h3>Cadastro de Aeronaves</h3>
+                    <form>
+                        ID <input type="text" disabled><br>
+                        Modelo <input type="text" required><br>
+                        Código <input type="text" required><br>
+                        Fabricante <input type="text" required><br>
+                        Tipo Aeronave <select>
+                            <option>Comercial</option>
+                            <option>Executivo</option>
+                            <option>Defesa</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="v-pills-manutencao" role="tabpanel" aria-labelledby="v-pillsmanutencaoe-tab" tabindex="0">
+                    <h3>Agendamento Manutenções</h3>
+                    <form>
+                        ID <input type="text" disabled><br>
+                        Data Hora <input type="datetime" required><br>
+                        Observação <input type="text" required><br>
+                        Tipo Manutenção <select>
+                            <option>Preventiva</option>
+                            <option>Corretiva</option> 
+                        </select>
+                        <br>
+                        Aeronave ID <input placeholder="{AeronaveID}" type="text" disabled><br>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="v-pills-piloto" role="tabpanel" aria-labelledby="v-pills-piloto-tab" tabindex="0">
+                    <form>
+                        <h3>Cadastro Piloto</h3>
+                        ID <input type="text" disabled><br>
+                        Nome <input type="text"><br>
+                        Matricula <input placeholder="008108" type="text" disabled><br>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="v-pills-voo" role="tabpanel" aria-labelledby="v-pills-voo-tab" tabindex="0">
+                    <form>
+                        <h3>Agendamento Voos</h3>
+                        ID <input type="text" disabled><br>
+                        Origem <input type="text"><br>
+                        Destino <input type="text"><br>
+                        Partida <input type="datetime"><br>
+                        Chegada <input type="datetime"><br>
+                        Codigo Aeronave <input placeholder="{CodigoAeronave}" type="text" disabled><br>
+                        Matricula Piloto <input placeholder="{MatriculaPiloto}" type="text" disabled><br>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="v-pills-cancelamento" role="tabpanel" aria-labelledby="v-pills-cancelamento-tab" tabindex="0">
+                    <form>
+                        <h3>Cancelamento de Voo</h3>
+                        Motivo <input type="text"><br>
+                        Data e Hora da Notificação <input type="datetime"><br>
+                        Voo ID <input type="number"><br>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<script src="js/relacoes.js" type="java-script"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+ </body>
+</html>

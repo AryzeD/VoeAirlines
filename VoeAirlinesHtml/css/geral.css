@@ -1,0 +1,15 @@
+#topo{
+    width:100%;
+    height:18px;
+    font-size: 8px;
+    color:white;
+    background:cadetblue;
+    animation: movimentar 1s;
+    text-align:right;
+    margin-right: 10px;
+}
+
+@keyframes movimentar {
+    from{background-color: black}
+    to{background: white}    
+}
